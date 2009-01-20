@@ -1,0 +1,47 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 9c02cdf9005b8652b7faec3f20f895e74a96a689 Build.PL
+SHA1 23e8aefca52ead8091ba2e78e8dde12edcb8a869 CHANGES
+SHA1 7bbe0110a62a2f8ee0eb1d521b33b34e8df8fdf3 LICENSE
+SHA1 8b6a06ebac798a1182b5dc8d105c678c0c6447dc MANIFEST
+SHA1 fdfe7b433dd6bfaa0b7d9f12c4a1c5b61d9a98bd MANIFEST.SKIP
+SHA1 22c1f9697a28bedfdaad88fa63f0a75898395b59 META.yml
+SHA1 df1115fde309dd1e783862e940a90388dd852761 Makefile.PL
+SHA1 479c99c612403116b1c7114e3db18ac84ebc7d48 README
+SHA1 bdd6c35163bc25ec2668bcc645a579629eecfc22 bin/peekvideo
+SHA1 1a67a6909f70b910b3c901900ff778c3e3f0226e examples/fourcc.pl
+SHA1 758ffc07351848a5272bddd320dbdd77a6d17b83 lib/Video/FourCC/Info.pm
+SHA1 f0c93f8c6dcad706f9cd426e5f4602d26d3d984a lib/Video/FourCC/codecs.dat
+SHA1 cec47d758e4275be64d20e3bb2cc6f98443520d4 t/00signature.t
+SHA1 e901fa9386900e998e8e4b7903356f20e2fb2844 t/01compile.t
+SHA1 878c4e3140b2869f139992525a9c18c07491240b t/01critic.rc
+SHA1 421c3eba02cb6c98cd5620d4bb13453132fd1e43 t/01critic.t
+SHA1 1f24bbfee9a4e27fe6d6ace9d2785cfb496505fc t/01kwalitee.t
+SHA1 511d06b781fd83b5070f1aba4aa7bf2e59c43e44 t/01manifest.t
+SHA1 a6bb7e700f5bc09ead21b6ba46552fb6440f33a8 t/01meta.t
+SHA1 e1510968f09474c15e48245119d720b61ad30c9b t/01pod-coverage.t
+SHA1 315ea7528eb4e4a1ceb44d6fab2ad4d09cabe615 t/01pod.t
+SHA1 e322d847381343c2172f26680f96795b4cdc4a7d t/02core.t
+SHA1 49a70fb0eddf4585617c6695ddc2c501aa7eb663 t/02exceptions.t
+SHA1 fe3abfed717fac49ecbe8fd5d238521597b7ffa5 t/02fallback.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (GNU/Linux)
+
+iEYEARECAAYFAkl1VScACgkQYYN9T93mai/GnwCfSWxcgy0cfNRG1uy0iFRPklfS
+kD8An1qHXgsfUY0sfVrgxbzQWf1Es3fP
+=KE06
+-----END PGP SIGNATURE-----

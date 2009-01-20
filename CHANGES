@@ -1,6 +1,12 @@
 Test::DistManifest Change History
 
-$Id: CHANGES 5 2008-12-25 23:16:47Z frequency $
+$Id: CHANGES 5001 2009-01-20 04:30:51Z FREQUENCY@cpan.org $
+
+2009-01-19 by FREQUENCY
+- Version tagged 1.1
+- Fixed error with multiple plans for 02fallback.t
+- Fixed svn:keywords
+- Now assumes FourCC's are not case sensitive
 
 2008-12-24 by FREQUENCY
 - Version tagged 1.0

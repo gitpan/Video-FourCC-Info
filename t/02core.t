@@ -3,14 +3,14 @@
 # t/02core.t
 #  Tests core functionality
 #
-# $Id: 02manifest.t 5 2008-12-25 23:16:47Z frequency $
+# $Id: 02core.t 4999 2009-01-20 04:20:20Z FREQUENCY@cpan.org $
 #
 # This test script is hereby released into the public domain.
 
 use strict;
 use warnings;
 
-use Test::More tests => 7;
+use Test::More tests => 8;
 use Test::NoWarnings;
 
 use Video::FourCC::Info;
@@ -29,6 +29,9 @@ use Video::FourCC::Info;
 {
   my $fourcc = Video::FourCC::Info->describe('DIV3');
   is($fourcc, 'DivX 3 Low-Motion', 'Use of class method describe');
+
+  $fourcc = Video::FourCC::Info->describe('div3');
+  is($fourcc, 'DivX 3 Low-Motion', 'Lowercase use of describe');
 }
 
 # Check that the date parsed is appropriate

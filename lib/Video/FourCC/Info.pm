@@ -1,7 +1,7 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: DistManifest.pm 11 2008-12-25 23:44:13Z frequency $
+# $Id: Info.pm 5002 2009-01-20 04:35:47Z FREQUENCY@cpan.org $
 #
 # Copyright (C) 2009 by Jonathan Yu <frequency@cpan.org>
 #
@@ -48,11 +48,11 @@ Character Code
 
 =head1 VERSION
 
-Version 1.0 ($Id: DistManifest.pm 11 2008-12-25 23:44:13Z frequency $)
+Version 1.1 ($Id: Info.pm 5002 2009-01-20 04:35:47Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0');
+use version; our $VERSION = qv('1.1');
 
 =head1 DESCRIPTION
 
@@ -65,8 +65,8 @@ human error or for some other reason.
 This is similar to the four-byte "magic number" used by the UNIX file(1)
 command to roughly determine a file format.
 
-As far as I know, this is a case sensitive code, since it is byte-dependent,
-and is not actually an alphanumeric code (although it is represented as such).
+Most applications seem to treat this as a case insensitive code. As a result,
+internally, your given FourCC's will be silently converted to uppercase.
 
 =head1 SYNOPSIS
 
@@ -107,6 +107,8 @@ sub new {
 
   Carp::croak('You must call this as a class method') if ref($class);
   Carp::croak('You must specify a FourCC') unless defined($fourcc);
+
+  $fourcc = uc($fourcc);
 
   my $self = {
     fourcc         => $fourcc,

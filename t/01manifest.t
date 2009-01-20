@@ -3,7 +3,7 @@
 # t/01manifest.t
 #  Ensures MANIFEST file is up-to-date
 #
-# $Id: 02manifest.t 5 2008-12-25 23:16:47Z frequency $
+# $Id: 01manifest.t 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $
 #
 # This test script is hereby released into the public domain.
 
