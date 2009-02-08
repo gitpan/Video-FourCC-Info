@@ -3,7 +3,7 @@
 # t/01kwalitee.t
 #  Uses the CPANTS Kwalitee metrics to test the distribution
 #
-# $Id: 01kwalitee.t 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $
+# $Id: 01kwalitee.t 5226 2009-02-08 00:06:30Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -21,4 +21,5 @@ if ($@) {
   plan skip_all => 'Test::Kwalitee required to test distribution Kwalitee';
 }
 
+# Everything is set up, run the Kwalitee tests
 Test::Kwalitee->import();

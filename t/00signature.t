@@ -3,7 +3,7 @@
 # t/00signature.t
 #  Test that the SIGNATURE matches the distribution
 #
-# $Id: 00signature.t 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $
+# $Id: 00signature.t 5226 2009-02-08 00:06:30Z FREQUENCY@cpan.org $
 #
 # This test script is hereby released into the public domain.
 
@@ -22,4 +22,5 @@ if ($@) {
 }
 
 plan tests => 1;
+
 signature_ok();

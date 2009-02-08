@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $
+# $Id: Build.PL 5227 2009-02-08 00:18:03Z FREQUENCY@cpan.org $
 #
 # This helper script is hereby released into the public domain.
 
@@ -65,6 +65,7 @@ my $builder = Module::Build->new(
     'Test::Pod'               => '1.14',
     'Test::Pod::Coverage'     => '1.04',
     'Test::DistManifest'      => 0,
+    'Test::Without::Module'   => 0,
   },
   conflicts => {
   },

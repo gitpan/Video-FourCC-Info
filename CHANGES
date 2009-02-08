@@ -1,6 +1,12 @@
 Test::DistManifest Change History
 
-$Id: CHANGES 5001 2009-01-20 04:30:51Z FREQUENCY@cpan.org $
+$Id: CHANGES 5228 2009-02-08 00:25:56Z FREQUENCY@cpan.org $
+
+2009-02-07 by FREQUENCY
+- Version tagged 1.1.1
+- Hopefully fixed some failing tests due to upstream DBD::SQLite
+- Updated Build.PL and META.yml accordingly
+- Added recommended dependency Test::Without::Module
 
 2009-01-19 by FREQUENCY
 - Version tagged 1.1

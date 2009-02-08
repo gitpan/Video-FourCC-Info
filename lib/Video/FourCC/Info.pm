@@ -1,7 +1,7 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: Info.pm 5002 2009-01-20 04:35:47Z FREQUENCY@cpan.org $
+# $Id: Info.pm 5228 2009-02-08 00:25:56Z FREQUENCY@cpan.org $
 #
 # Copyright (C) 2009 by Jonathan Yu <frequency@cpan.org>
 #
@@ -48,11 +48,11 @@ Character Code
 
 =head1 VERSION
 
-Version 1.1 ($Id: Info.pm 5002 2009-01-20 04:35:47Z FREQUENCY@cpan.org $)
+Version 1.1.1 ($Id: Info.pm 5228 2009-02-08 00:25:56Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.1');
+use version; our $VERSION = qv('1.1.1');
 
 =head1 DESCRIPTION
 

@@ -3,7 +3,7 @@
 # t/01critic.t
 #  Test the distribution using Perl::Critic for guidelines
 #
-# $Id: 01critic.t 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $
+# $Id: 01critic.t 5226 2009-02-08 00:06:30Z FREQUENCY@cpan.org $
 #
 # This test script is hereby released into the public domain.
 
@@ -26,4 +26,5 @@ if ($@) {
 
 my $rcfile = File::Spec->catfile('t', '01critic.rc');
 Test::Perl::Critic->import(-profile => $rcfile);
+
 all_critic_ok();
