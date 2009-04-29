@@ -3,9 +3,13 @@
 # t/00signature.t
 #  Test that the SIGNATURE matches the distribution
 #
-# $Id: 00signature.t 5226 2009-02-08 00:06:30Z FREQUENCY@cpan.org $
+# $Id: 00signature.t 6743 2009-04-29 13:42:50Z FREQUENCY@cpan.org $
 #
-# This test script is hereby released into the public domain.
+# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
+#
+# This package and its contents are released by the author into the
+# Public Domain, to the full extent permissible by law. For additional
+# information, please see the included `LICENSE' file.
 
 use strict;
 use warnings;
@@ -16,11 +20,15 @@ unless ($ENV{TEST_AUTHOR}) {
   plan skip_all => 'Set TEST_AUTHOR to enable module author tests';
 }
 
-eval 'use Test::Signature';
+eval {
+  require Test::Signature;
+};
 if ($@) {
   plan skip_all => 'Test::Signature required to test SIGNATURE files';
 }
 
 plan tests => 1;
+
+Test::Signature->import();
 
 signature_ok();

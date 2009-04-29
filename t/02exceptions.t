@@ -3,9 +3,13 @@
 # t/02exceptions.t
 #  Tests fast errors produced with obvious mistakes
 #
-# $Id: 02exceptions.t 5226 2009-02-08 00:06:30Z FREQUENCY@cpan.org $
+# $Id: 02exceptions.t 6743 2009-04-29 13:42:50Z FREQUENCY@cpan.org $
 #
-# This test script is hereby released into the public domain.
+# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
+#
+# This package and its contents are released by the author into the
+# Public Domain, to the full extent permissible by law. For additional
+# information, please see the included `LICENSE' file.
 
 use strict;
 use warnings;
@@ -14,11 +18,6 @@ use Test::More tests => 11;
 use Test::NoWarnings;
 
 use Video::FourCC::Info;
-
-# Avoid warnings like:
-#  Name "DBD::SQLite::sqlite_version" used only once: possible typo
-# This is the reason for 90% of the failing CPAN Testers reports
-if (defined $DBD::SQLite::sqlite_version) { }
 
 # Missing parameters
 {

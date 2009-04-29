@@ -1,12 +1,13 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: Info.pm 5228 2009-02-08 00:25:56Z FREQUENCY@cpan.org $
+# $Id: Info.pm 6745 2009-04-29 16:35:29Z FREQUENCY@cpan.org $
 #
-# Copyright (C) 2009 by Jonathan Yu <frequency@cpan.org>
+# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
-# This package is distributed with the same licensing terms as Perl itself.
-# For additional information, please read the included `LICENSE' file.
+# This package and its contents are released by the author into the
+# Public Domain, to the full extent permissible by law. For additional
+# information, please see the included `LICENSE' file.
 
 package Video::FourCC::Info;
 
@@ -20,6 +21,17 @@ use DBI ();
 use File::Basename ();
 use File::Spec     ();
 
+BEGIN {
+  use DBD::SQLite ();
+  # Avoid warnings like:
+  #  Name "DBD::SQLite::sqlite_version" used only once: possible typo
+  # This is the reason for 90% of the failing CPAN Testers reports
+
+  # We have to do this, unfortunately.
+  ## no critic(ProhibitPackageVars)
+  if (defined $DBD::SQLite::sqlite_version) { }
+}
+
 # Use DateTime if available
 eval { require DateTime; };
 
@@ -29,7 +41,8 @@ my $data = File::Spec->catfile(
   'codecs.dat'
 );
 
-# Since this is a 
+# Since we are only going to read, this is okay; we can share
+# the dbhandle with different threads if need be
 my $dbh = DBI->connect(
   'dbi:SQLite:dbname=' . $data,
   'notused', # cannot be null, or DBI complains
@@ -43,16 +56,15 @@ my $dbh = DBI->connect(
 
 =head1 NAME
 
-Video::FourCC::Info - Find information about codecs specified as Four
-Character Code
+Video::FourCC::Info - Find information about codecs from its FourCC
 
 =head1 VERSION
 
-Version 1.1.1 ($Id: Info.pm 5228 2009-02-08 00:25:56Z FREQUENCY@cpan.org $)
+Version 1.1.2 ($Id: Info.pm 6745 2009-04-29 16:35:29Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.1.1');
+use version; our $VERSION = qv('1.1.2');
 
 =head1 DESCRIPTION
 
@@ -119,17 +131,20 @@ sub new {
 
   my $href = $sth->fetchrow_hashref;
   if (defined $href) {
-    if (defined $href->{description}) {
-      $self->{desc}  = $href->{description};
-    }
+    $self->{desc}  = $href->{description};
+
     if (defined $href->{owner}) {
       $self->{owner} = $href->{owner};
     }
     if (defined $href->{registered}) {
       # If we have a DateTime object, we should parse the date and store it
       if (exists $INC{'DateTime.pm'}) {
-        my ($year, $month, $day) = split(/-/, $href->{registered});
-        $self->{regdate} = DateTime->new(
+        # Extract the Y/M/D numbers from $href->{registered}; this should
+        # have the format: yyyy-mm-dd
+        my ($year, $month, $day) =
+          ($href->{registered} =~ m/^(\d{4})-(\d{2})-(\d{2})$/s);
+
+          $self->{regdate} = DateTime->new(
           year    => $year,
           month   => $month,
           day     => $day,
@@ -330,8 +345,7 @@ maintainer noted above.
 If you have a bug report or feature request, please file them on the CPAN
 Request Tracker at L<http://rt.cpan.org>. If you are able to submit your bug
 report in the form of failing unit tests, you are B<strongly> encouraged to do
-so. Regular bug reports are always accepted and appreciated via the CPAN bug
-tracker.
+so.
 
 =head1 SEE ALSO
 
@@ -363,39 +377,28 @@ L<http://msdn.microsoft.com/en-us/library/ms867195.aspx#fourcccodes>
 
 =head1 LICENSE
 
-Copyright (C) 2009 by Jonathan Yu <frequency@cpan.org>
+Copyleft 2009 by Jonathan Yu <frequency@cpan.org>. All rights reversed.
 
-This package is distributed under the same terms as Perl itself. At time of
-writing, this means that you are entitled to enjoy the covenants of, at your
-option:
+I, the copyright holder of this package, hereby release the entire contents
+therein into the public domain. This applies worldwide, to the extent that
+it is permissible by law.
 
-=over
+In case this is not legally possible, I grant any entity the right to use
+this work for any purpose, without any conditions, unless such conditions
+are required by law.
 
-=item 1
-
-The Free Software Foundation's GNU General Public License (GPL), version 2 or
-later; or
-
-=item 2
-
-The Perl Foundation's Artistic License, version 2.0 or later
-
-=back
+The full details of this can be found in the B<LICENSE> file included in
+this package.
 
 =head1 DISCLAIMER OF WARRANTY
 
-This software is provided by the copyright holders and contributors "AS IS"
-and ANY EXPRESS OR IMPLIED WARRANTIES, including, but not limited to, the
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED.
-
-In no event shall the copyright owner or contributors be liable for any
-direct, indirect, incidental, special, exemplary or consequential damages
-(including, but not limited to, procurement of substitute goods or services;
-loss of use, data or profits; or business interruption) however caused and on
-any theory of liability, whether in contract, strict liability or tort
-(including negligence or otherwise) arising in any way out of the use of this
-software, even if advised of the possibility of such damage.
+The software is provided "AS IS", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and noninfringement. In no event shall the
+authors or copyright holders be liable for any claim, damages or other
+liability, whether in an action of contract, tort or otherwise, arising from,
+out of or in connection with the software or the use or other dealings in
+the software.
 
 =cut
 

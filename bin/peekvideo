@@ -3,9 +3,11 @@
 # bin/peekvideo
 #  Determine information about a given media file
 #
-# $Id: peekvideo 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $
+# $Id: peekvideo 6744 2009-04-29 14:32:07Z FREQUENCY@cpan.org $
 #
-# This example script is hereby released into the public domain.
+# This package and its contents are released by the author into the
+# Public Domain, to the full extent permissible by law. For additional
+# information, please see the included `LICENSE' file.
 
 use strict;
 use warnings;
@@ -21,11 +23,11 @@ peekvideo - determine a codec used by a given file
 
 =head1 VERSION
 
-Version 1.0 ($Id: peekvideo 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $)
+Version 1.1 ($Id: peekvideo 6744 2009-04-29 14:32:07Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.0');
+use version; our $VERSION = qv('1.1');
 
 =head1 SYNOPSIS
 
@@ -56,14 +58,14 @@ foreach my $file (@files) {
     $video = Video::Info->new(-file => $file);
   };
   if ($@) {
-    printf STDERR "Problem determining information about '%s':\n", $file;
+    printf {*STDERR} "Problem determining information about '%s':\n", $file;
     print 'In Video::Info: ', $@;
     next;
   }
 
   # Check if we have a FourCC
   unless (length($video->vcodec) == 4) {
-    printf STDERR "Video::Info returns '%s', which is not a FourCC\n",
+    printf {*STDERR} "Video::Info returns '%s', which is not a FourCC\n",
       $video->vcodec;
     next;
   }
@@ -73,7 +75,8 @@ foreach my $file (@files) {
     $codec = Video::FourCC::Info->new($video->vcodec);
   };
   if ($@) {
-    printf STDERR "Codec '%s' is unregistered or unknown\n", $video->vcodec;
+    printf {*STDERR} "Codec '%s' is unregistered or unknown\n",
+      $video->vcodec;
     next;
   }
 
@@ -123,11 +126,11 @@ use the corresponding support methods.
 
 =head1 LICENSE
 
-Copyleft (C) 2009 by Jonathan Yu <frequency@cpan.org>
+Copyleft (C) 2009 by Jonathan Yu <frequency@cpan.org>. All rights reversed.
 
-This script is distributed with the C<Video::FourCC::Info> package to
-provide a simple demonstration of functionality. It is hereby released
-by its author into the public domain.
+This package and its contents are released by the author into the Public
+Domain, to the full extent permissible by law. For additional information,
+please see the included `LICENSE' file.
 
 =head1 SEE ALSO
 

@@ -3,9 +3,13 @@
 # t/01manifest.t
 #  Ensures MANIFEST file is up-to-date
 #
-# $Id: 01manifest.t 4994 2009-01-19 21:05:22Z FREQUENCY@cpan.org $
+# $Id: 01manifest.t 6743 2009-04-29 13:42:50Z FREQUENCY@cpan.org $
 #
-# This test script is hereby released into the public domain.
+# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
+#
+# This package and its contents are released by the author into the
+# Public Domain, to the full extent permissible by law. For additional
+# information, please see the included `LICENSE' file.
 
 use strict;
 use warnings;

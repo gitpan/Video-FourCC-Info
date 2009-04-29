@@ -1,0 +1,134 @@
+2009-04-29  Jonathan Yu <frequency@cpan.org>
+
+	Updated license & copyright information
+
+2009-04-29  Jonathan Yu <frequency@cpan.org>
+
+	- Added t/99data.t to MANIFEST
+	- Fixed bin/peekvideo (using {*FH} calls to print)
+
+2009-04-29  Jonathan Yu <frequency@cpan.org>
+
+	- Removed prereq test
+	- Removed CHANGES file (which is automatically generated now)
+	- Changed license to Public Domain
+	- Minor doc changes in Video/FourCC/Info.pm
+	- Makefile.PL changed to passthrough from traditional
+	- Added ignore for debian/ control files and .tmp files
+	- Removed interface description from README; you can get that from the POD
+	- Bumped version up to 1.1.2 to prepare for release
+
+2009-04-24  Jonathan Yu <frequency@cpan.org>
+
+	Added Build.bat to MANIFEST.SKIP for Win32 builds...
+
+2009-03-16  Jonathan Yu <frequency@cpan.org>
+
+	- Removed version-specific stuff from the README so I can be lazy (it was out-of-date anyway)
+	- Corrected svn:keywords property
+
+2009-03-16  Jonathan Yu <frequency@cpan.org>
+
+	- Upgraded version to 1.1.2
+	- Removed use of Test::Prereq due to requiring a live connection
+	- Fixed MANIFEST; using a Changes file now
+
+2009-02-27  Jonathan Yu <frequency@cpan.org>
+
+	- Added tests (99data.t) to ensure data integrity
+	- Forced PerlCritic to ignore that hackish thing I did with DBD::SQLite::sqlite_version
+	- Removed the check for defined $description; it must always be defined per the data constraint check
+	- Updated the codecs.dat - fixed typos and stuff.
+
+2009-02-27  Jonathan Yu <frequency@cpan.org>
+
+	- Put braces around {STDERR} filehandle for peekvideo
+	- Silenced the complaint about package variables, since we are using that hack to prevent a bug from DBD::SQLite from causing warnings
+
+2009-02-27  Jonathan Yu <frequency@cpan.org>
+
+	Fixed version requirements
+
+2009-02-26  Jonathan Yu <frequency@cpan.org>
+
+	Removed taint mode from 01prereq.t - File::Find chdir's
+
+2009-02-20  Jonathan Yu <frequency@cpan.org>
+
+	Updated Build.PL prerequisites and added a hack to 01prereq.t to fix a bug - Test::Prereq::Build does not provide a "add_build_element" method
+
+2009-02-20  Jonathan Yu <frequency@cpan.org>
+
+	Added svn:keywords. I wonder if I can set a default somehow :-)
+
+2009-02-20  Jonathan Yu <frequency@cpan.org>
+
+	Added some more tests :-)
+
+2009-02-08  Jonathan Yu <frequency@cpan.org>
+
+	- Moved the hack code to prevent DBD::SQLite related warnings to the actual Info.pm module file (and thus shrank some of the tests back to the normal size)
+
+2009-02-07  Jonathan Yu <frequency@cpan.org>
+
+	- Changed version to 1.1.1 instead (since there has not been an API change since 1.1)
+
+2009-02-07  Jonathan Yu <frequency@cpan.org>
+
+	Update to version 1.2
+
+2009-02-07  Jonathan Yu <frequency@cpan.org>
+
+	- Added Test::NoWarnings to 01compile.t
+	- Added check code to prevent warnings like: Name "DBD::SQLite::sqlite_version" used only once: possible typo (this is the reason for 90% of failing CPAN Testers reports, and is outside of my direct control)
+	- Delayed import of Test::NoWarnings (delays loading of test hooks until tests are planned)
+
+2009-01-19  Jonathan Yu <frequency@cpan.org>
+
+	Don't uppercase the fourcc until we know it is defined
+
+2009-01-19  Jonathan Yu <frequency@cpan.org>
+
+	Update change history to prepare for release
+
+2009-01-19  Jonathan Yu <frequency@cpan.org>
+
+	Updated the POD and README
+
+2009-01-19  Jonathan Yu <frequency@cpan.org>
+
+	- Updated database so that all FourCC codes are uppercase
+	- Gave codecs.dat a mime-type of application/x-sqlite3
+	- Added arbitrary case FourCC lookups (treat them as case-insensitive. I'm not sure if this is the right thing to do, but this is what the GSpot codec appliance does)
+	- Updated tests to ensure that case insensitivity is working
+
+2009-01-19  Jonathan Yu <frequency@cpan.org>
+
+	- Tagged version 1.1
+	-> Updated META.yml and Info.pm to match
+	- Updated change history
+
+2009-01-19  Jonathan Yu <frequency@cpan.org>
+
+	Updated svn:keyword property
+
+2009-01-17  Jonathan Yu <frequency@cpan.org>
+
+	Added a reference to the main Video::FourCC::Info's SUPPORT heading in peekvideo
+
+2009-01-17  Jonathan Yu <frequency@cpan.org>
+
+	- SIGNATUREs are distribution only and don't need to be versioned
+	- Added requirement to have a SUPPORT section in POD
+
+2009-01-17  Jonathan Yu <frequency@cpan.org>
+
+	Initial commit of Video::FourCC::Info
+
+2009-01-17  Jonathan Yu <frequency@cpan.org>
+
+	Added directories for Test::DistManifest and Video::FourCC::Info
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
