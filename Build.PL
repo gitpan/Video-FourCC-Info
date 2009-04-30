@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 6743 2009-04-29 13:42:50Z FREQUENCY@cpan.org $
+# $Id: Build.PL 6750 2009-04-30 02:50:47Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the
 # Public Domain, to the full extent permissible by law. For additional
@@ -43,7 +43,7 @@ my $builder = Module::Build->new(
 
     # Database related modules
     'DBI'                     => 0,
-    'DBD::SQLite'             => 1.14,
+    'DBD::SQLite'             => 1.20,
   },
   build_requires => {
     # User tests for good functionality

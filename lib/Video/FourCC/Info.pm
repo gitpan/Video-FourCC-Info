@@ -1,7 +1,7 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: Info.pm 6745 2009-04-29 16:35:29Z FREQUENCY@cpan.org $
+# $Id: Info.pm 6750 2009-04-30 02:50:47Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -18,19 +18,9 @@ use Carp ();
 
 use DBI ();
 
-use File::Basename ();
-use File::Spec     ();
-
-BEGIN {
-  use DBD::SQLite ();
-  # Avoid warnings like:
-  #  Name "DBD::SQLite::sqlite_version" used only once: possible typo
-  # This is the reason for 90% of the failing CPAN Testers reports
-
-  # We have to do this, unfortunately.
-  ## no critic(ProhibitPackageVars)
-  if (defined $DBD::SQLite::sqlite_version) { }
-}
+use File::Basename  ();
+use File::Spec      ();
+use DBD::SQLite     ();
 
 # Use DateTime if available
 eval { require DateTime; };
@@ -60,11 +50,11 @@ Video::FourCC::Info - Find information about codecs from its FourCC
 
 =head1 VERSION
 
-Version 1.1.2 ($Id: Info.pm 6745 2009-04-29 16:35:29Z FREQUENCY@cpan.org $)
+Version 1.1.3 ($Id: Info.pm 6750 2009-04-30 02:50:47Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.1.2');
+use version; our $VERSION = qv('1.1.3');
 
 =head1 DESCRIPTION
 

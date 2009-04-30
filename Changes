@@ -1,5 +1,13 @@
 2009-04-29  Jonathan Yu <frequency@cpan.org>
 
+	- Changed t/03scripts.t to only run if Video::Info is installed (otherwise compile fails since it's required for the peekvideo script)
+	- Updated to version 1.20 for DBD::SQLite, since the multiple defines error is fixed in that version
+	-> the hack code was removed
+	-> This should also improve code coverage
+	- Bumped version to 1.1.3 to prepare for release (again)
+
+2009-04-29  Jonathan Yu <frequency@cpan.org>
+
 	Updated license & copyright information
 
 2009-04-29  Jonathan Yu <frequency@cpan.org>

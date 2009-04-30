@@ -3,7 +3,7 @@
 # t/03scripts.t
 #  Test that included script files compile properly
 #
-# $Id: 03scripts.t 6743 2009-04-29 13:42:50Z FREQUENCY@cpan.org $
+# $Id: 03scripts.t 6750 2009-04-30 02:50:47Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -22,6 +22,13 @@ eval {
 };
 if ($@) {
   plan(skip_all => 'Test::Script required to test scripts');
+}
+
+eval {
+  require Video::Info;
+};
+if ($@) {
+  plan(skip_all => 'Video::Info required for bin/peekvideo');
 }
 
 Test::Script->import;
