@@ -3,7 +3,7 @@
 # t/03scripts.t
 #  Test that included script files compile properly
 #
-# $Id: 03scripts.t 6750 2009-04-30 02:50:47Z FREQUENCY@cpan.org $
+# $Id: 03scripts.t 6773 2009-04-30 12:40:59Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -15,7 +15,9 @@ use strict;
 use warnings;
 
 use Test::More;
-use Test::NoWarnings; # 1 test
+
+# Cannot 'use' because we might skip tests
+require Test::NoWarnings; # 1 test
 
 eval {
   require Test::Script;
@@ -31,8 +33,11 @@ if ($@) {
   plan(skip_all => 'Video::Info required for bin/peekvideo');
 }
 
-Test::Script->import;
-
 plan tests => 2;
 
+# Delay loading of test hooks
+Test::NoWarnings->import();
+Test::Script->import();
+
+# Each of these take 1 test
 script_compiles_ok('bin/peekvideo', 'peekvideo program compiles');

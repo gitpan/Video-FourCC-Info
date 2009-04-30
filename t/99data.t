@@ -3,7 +3,7 @@
 # t/99data.t
 #  Test data constraints of the SQLite database
 #
-# $Id: 99data.t 6744 2009-04-29 14:32:07Z FREQUENCY@cpan.org $
+# $Id: 99data.t 6773 2009-04-30 12:40:59Z FREQUENCY@cpan.org $
 #
 # By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
 #
@@ -18,8 +18,8 @@ use Test::More;
 
 use File::Spec;
 
-unless ($ENV{TEST_AUTHOR} or $ENV{TEST_DATA}) {
-  plan skip_all => 'Set TEST_AUTHOR or TEST_DATA to check data integrity';
+unless ($ENV{TEST_AUTHOR}) {
+  plan skip_all => 'Set TEST_AUTHOR to enable module author tests';
 }
 
 use DBI ();

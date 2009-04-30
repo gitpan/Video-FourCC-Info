@@ -1,3 +1,9 @@
+2009-04-30  Jonathan Yu <frequency@cpan.org>
+
+	- Dropped TEST_DATA from t/99data.t
+	- Made t/03scripts.t still work in case the tests are skipped
+	- Bumped version to 1.1.4
+
 2009-04-29  Jonathan Yu <frequency@cpan.org>
 
 	- Changed t/03scripts.t to only run if Video::Info is installed (otherwise compile fails since it's required for the peekvideo script)
