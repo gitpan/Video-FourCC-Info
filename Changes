@@ -1,3 +1,17 @@
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	Used clearer license - PD (fallback on MIT, Artistic-2+, GPL-2+)
+
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	- Added the databases' SQL source as source-data.sql
+
+2009-05-12  Jonathan Yu <frequency@cpan.org>
+
+	- Bumped version to 1.1.5
+	- Moved bin/peekvideo to an example file because it depends on Video::Info which is non-free
+	- Removed t/03scripts.t and related requirements (Test::Script etc) because peekvideo is no longer in bin/
+
 2009-04-30  Jonathan Yu <frequency@cpan.org>
 
 	- Dropped TEST_DATA from t/99data.t

@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 6750 2009-04-30 02:50:47Z FREQUENCY@cpan.org $
+# $Id: Build.PL 7049 2009-05-12 18:44:11Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the
 # Public Domain, to the full extent permissible by law. For additional
@@ -70,15 +70,11 @@ my $builder = Module::Build->new(
     'Test::Without::Module'   => 0,
     'Test::Portability::Files' => 0,
     'Test::MinimumVersion'    => 0,
-    'Test::Script'            => 0,
   },
   conflicts => {
   },
 
   add_to_cleanup => [ 'Video-FourCC-Info-*' ],
-  script_files => [
-    'bin/peekvideo',
-  ],
 
   meta_merge => {
     resources => {

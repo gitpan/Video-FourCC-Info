@@ -33,7 +33,7 @@ use version; our $VERSION = qv('1.1');
 
 Usage: peekvideo filename [...]
 
-Give a single path referring to a file containing video data, this script
+Given a single path referring to a file containing video data, this script
 will determine the codec required for the media to play.
 
 =head1 DESCRIPTION

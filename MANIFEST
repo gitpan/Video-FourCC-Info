@@ -1,7 +1,7 @@
 Build.PL
 Changes
 examples/fourcc.pl
-bin/peekvideo
+examples/peekvideo.pl
 lib/Video/FourCC/codecs.dat
 lib/Video/FourCC/Info.pm
 LICENSE
@@ -11,6 +11,7 @@ MANIFEST.SKIP
 META.yml
 README
 SIGNATURE
+source-data.sql
 t/00signature.t
 t/01compile.t
 t/01critic.rc
@@ -25,5 +26,4 @@ t/01portability.t
 t/02core.t
 t/02exceptions.t
 t/02fallback.t
-t/03scripts.t
 t/99data.t
