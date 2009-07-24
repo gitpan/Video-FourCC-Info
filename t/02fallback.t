@@ -3,13 +3,7 @@
 # t/02fallback.t
 #  Tests core functionality
 #
-# $Id: 02fallback.t 6743 2009-04-29 13:42:50Z FREQUENCY@cpan.org $
-#
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
-#
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# $Id: 02fallback.t 8174 2009-07-23 16:31:20Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

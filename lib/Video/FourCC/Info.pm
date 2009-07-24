@@ -1,9 +1,7 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: Info.pm 7049 2009-05-12 18:44:11Z FREQUENCY@cpan.org $
-#
-# By Jonathan Yu <frequency@cpan.org>, 2009. All rights reversed.
+# $Id: Info.pm 8188 2009-07-24 21:11:37Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the
 # Public Domain, to the full extent permissible by law. For additional
@@ -46,15 +44,15 @@ my $dbh = DBI->connect(
 
 =head1 NAME
 
-Video::FourCC::Info - Find information about codecs from its FourCC
+Video::FourCC::Info - Perl module to retrieve information about FourCCs
 
 =head1 VERSION
 
-Version 1.1.5 ($Id: Info.pm 7049 2009-05-12 18:44:11Z FREQUENCY@cpan.org $)
+Version 1.1.6 ($Id: Info.pm 8188 2009-07-24 21:11:37Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.1.5');
+use version; our $VERSION = qv('1.1.6');
 
 =head1 DESCRIPTION
 
@@ -367,18 +365,9 @@ L<http://msdn.microsoft.com/en-us/library/ms867195.aspx#fourcccodes>
 
 =head1 LICENSE
 
-Copyleft 2009 by Jonathan Yu <frequency@cpan.org>. All rights reversed.
-
-I, the copyright holder of this package, hereby release the entire contents
-therein into the public domain. This applies worldwide, to the extent that
-it is permissible by law.
-
-In case this is not legally possible, I grant any entity the right to use
-this work for any purpose, without any conditions, unless such conditions
-are required by law.
-
-The full details of this can be found in the B<LICENSE> file included in
-this package.
+In a perfect world, I could just say that this package and all of the code
+it contains is Public Domain. It's a bit more complicated than that; you'll
+have to read the included F<LICENSE> file to get the full details.
 
 =head1 DISCLAIMER OF WARRANTY
 

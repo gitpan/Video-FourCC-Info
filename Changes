@@ -1,3 +1,47 @@
+2009-07-24  Jonathan Yu <frequency@cpan.org>
+
+	Updated test messages
+
+2009-07-24  Jonathan Yu <frequency@cpan.org>
+
+	Silence Module::CPANTS::Kwalitee notes about what we're using (Test::Pod and Test::Pod::Coverage)
+
+2009-07-24  Jonathan Yu <frequency@cpan.org>
+
+	The last variables using TEST_AUTHOR now use RELEASE_TESTING|AUTOMATED_TESTING
+
+2009-07-24  Jonathan Yu <frequency@cpan.org>
+
+	More cleanup of author tests
+
+2009-07-24  Jonathan Yu <frequency@cpan.org>
+
+	Overhaul test scripts, remove them from Recommends (Alias' journal #5375)
+
+2009-07-24  Jonathan Yu <frequency@cpan.org>
+
+	Changed license field back to LICENSE
+
+2009-07-23  Jonathan Yu <frequency@cpan.org>
+
+	Update LICENSE and README to a smaller format. Clarify POD. No longer generates a readme using pod2text
+
+2009-07-22  Jonathan Yu <frequency@cpan.org>
+
+	Require Internet (TEST_INTERNET) to do the signature test, since it tries to download the key from a keyserver
+
+2009-06-14  Jonathan Yu <frequency@cpan.org>
+
+	No longer enforce "one dot only" in filenames. This breaks compatibility with OpenVMS.
+
+2009-06-14  Jonathan Yu <frequency@cpan.org>
+
+	Updated perlcriticrc
+
+2009-05-13  Jonathan Yu <frequency@cpan.org>
+
+	Updated LICENSE (removed some old text)
+
 2009-05-12  Jonathan Yu <frequency@cpan.org>
 
 	Used clearer license - PD (fallback on MIT, Artistic-2+, GPL-2+)

@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 7049 2009-05-12 18:44:11Z FREQUENCY@cpan.org $
+# $Id: Build.PL 8188 2009-07-24 21:11:37Z FREQUENCY@cpan.org $
 #
 # This package and its contents are released by the author into the
 # Public Domain, to the full extent permissible by law. For additional
@@ -20,7 +20,7 @@ my $builder = Module::Build->new(
   dist_author           => 'Jonathan Yu <frequency@cpan.org>',
   dist_version_from     => 'lib/Video/FourCC/Info.pm',
   dynamic_config        => 0,
-  create_readme         => 1,
+  create_readme         => 0,
   recursive_test_files  => 1,
   sign                  => 1,
   create_packlist       => 1,
@@ -58,18 +58,6 @@ my $builder = Module::Build->new(
 
     # Optional module DateTime
     'DateTime'                => 0,
-
-    # Author tests
-    'Test::Perl::Critic'      => 0,
-    'Test::YAML::Meta'        => 0,
-    'Test::Kwalitee'          => 1.01,
-    'Test::Signature'         => 0,
-    'Test::Pod'               => 1.14,
-    'Test::Pod::Coverage'     => 1.04,
-    'Test::DistManifest'      => 0,
-    'Test::Without::Module'   => 0,
-    'Test::Portability::Files' => 0,
-    'Test::MinimumVersion'    => 0,
   },
   conflicts => {
   },
