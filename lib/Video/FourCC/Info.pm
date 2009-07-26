@@ -1,11 +1,7 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: Info.pm 8188 2009-07-24 21:11:37Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# $Id: Info.pm 8227 2009-07-26 00:31:20Z FREQUENCY@cpan.org $
 
 package Video::FourCC::Info;
 
@@ -48,11 +44,11 @@ Video::FourCC::Info - Perl module to retrieve information about FourCCs
 
 =head1 VERSION
 
-Version 1.1.6 ($Id: Info.pm 8188 2009-07-24 21:11:37Z FREQUENCY@cpan.org $)
+Version 1.1.7 ($Id: Info.pm 8227 2009-07-26 00:31:20Z FREQUENCY@cpan.org $)
 
 =cut
 
-use version; our $VERSION = qv('1.1.6');
+use version; our $VERSION = qv('1.1.7');
 
 =head1 DESCRIPTION
 
@@ -287,9 +283,9 @@ Your name here ;-)
 
 =over
 
-=item * Thanks to Allen Day E<lt>allenday@ucla.eduE<gt> and Benjamin R. Ginter
-E<lt>bginter@asicommunications.comE<gt>, developers of Video::Info, which
-inspired the creation of this module.
+=item * Thanks to Allen Day E<lt>allenday@ucla.eduE<gt> and Benjamin R.
+Ginter E<lt>bginter@asicommunications.comE<gt>, developers of Video::Info,
+which inspired the creation of this module.
 
 =back
 
@@ -373,11 +369,11 @@ have to read the included F<LICENSE> file to get the full details.
 
 The software is provided "AS IS", without warranty of any kind, express or
 implied, including but not limited to the warranties of merchantability,
-fitness for a particular purpose and noninfringement. In no event shall the
-authors or copyright holders be liable for any claim, damages or other
-liability, whether in an action of contract, tort or otherwise, arising from,
-out of or in connection with the software or the use or other dealings in
-the software.
+fitness for a particular purpose and noninfringement. In no event shall
+the authors or copyright holders be liable for any claim, damages or other
+liability, whether in an action of contract, tort or otherwise, arising
+from, out of or in connection with the software or the use or other dealings
+in the software.
 
 =cut
 

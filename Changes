@@ -1,3 +1,21 @@
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	Bumped version to 1.1.7 to prepare for release
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	- Set svn:keywords properties
+	- Removed useless headers, reference the main module for license and copyright info
+	- Fixed peekvideo name
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	No longer test Perl::Critic during AUTOMATED_TESTING, only RELEASE_TESTING. Thanks to Elliot Shank for the discussion in a private mail.
+
+2009-07-25  Jonathan Yu <frequency@cpan.org>
+
+	Changed critic.rc to ignore PodSpelling policy
+
 2009-07-24  Jonathan Yu <frequency@cpan.org>
 
 	Updated test messages
