@@ -3,18 +3,15 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 8188 2009-07-24 21:11:37Z FREQUENCY@cpan.org $
-#
-# This package and its contents are released by the author into the
-# Public Domain, to the full extent permissible by law. For additional
-# information, please see the included `LICENSE' file.
+# $Id: Build.PL 8669 2009-08-20 02:37:09Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
 
-use Module::Build;
+use lib 'inc';
+use My::Builder;
 
-my $builder = Module::Build->new(
+my $builder = My::Builder->new(
   module_name           => 'Video::FourCC::Info',
   license               => 'unrestricted',
   dist_author           => 'Jonathan Yu <frequency@cpan.org>',
@@ -30,16 +27,6 @@ my $builder = Module::Build->new(
 
   requires => {
     'perl'                    => 5.006,
-
-    # Pragmatic and special modules
-    'Carp'                    => 1.04,
-    'version'                 => 0,
-    'warnings'                => 0,
-    'strict'                  => 0,
-
-    # File manipulation modules
-    'File::Spec'              => 0,
-    'File::Basename'          => 0,
 
     # Database related modules
     'DBI'                     => 0,
@@ -72,7 +59,7 @@ my $builder = Module::Build->new(
       # Official keys (homepage, license, bugtracker)
       repository   => 'http://svn.ali.as/cpan/trunk/Video-FourCC-Info',
       bugtracker   => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Video-FourCC-Info',
-      license      => 'http://dev.perl.org/licenses/',
+      license      => 'http://edwardsamuels.com/copyright/beyond/articles/public.html',
     },
   },
 );

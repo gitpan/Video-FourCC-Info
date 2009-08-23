@@ -1,9 +1,9 @@
 #!/usr/bin/perl -T
 
-# t/02exceptions.t
+# t/03exceptions.t
 #  Tests fast errors produced with obvious mistakes
 #
-# $Id: 02exceptions.t 8174 2009-07-23 16:31:20Z FREQUENCY@cpan.org $
+# $Id: 03exceptions.t 8620 2009-08-18 04:36:27Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

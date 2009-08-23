@@ -1,9 +1,9 @@
 #!/usr/bin/perl -T
 
-# t/02fallback.t
+# t/03fallback.t
 #  Tests core functionality
 #
-# $Id: 02fallback.t 8174 2009-07-23 16:31:20Z FREQUENCY@cpan.org $
+# $Id: 03fallback.t 8620 2009-08-18 04:36:27Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
