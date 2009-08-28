@@ -1,6 +1,6 @@
 ---
 name: Video-FourCC-Info
-version: 1.002
+version: 1.003
 author:
   - 'Jonathan Yu <frequency@cpan.org>'
 abstract: Perl module to retrieve information about FourCCs
@@ -10,6 +10,8 @@ requires:
   DBI: 0
   perl: 5.006
 build_requires:
+  DBD::SQLite: 1.2
+  DBI: 0
   Test::More: 0.62
   Test::NoWarnings: 0.084
 recommends:
@@ -19,7 +21,7 @@ dynamic_config: 0
 provides:
   Video::FourCC::Info:
     file: lib/Video/FourCC/Info.pm
-    version: 1.002
+    version: 1.003
 generated_by: Module::Build version 0.280801
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

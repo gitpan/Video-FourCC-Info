@@ -3,7 +3,7 @@
 # Build.PL
 #  Script to build and install this distribution
 #
-# $Id: Build.PL 8669 2009-08-20 02:37:09Z FREQUENCY@cpan.org $
+# $Id: Build.PL 8786 2009-08-28 21:38:32Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -36,6 +36,10 @@ my $builder = My::Builder->new(
     # User tests for good functionality
     'Test::More'              => 0.62,
     'Test::NoWarnings'        => 0.084,
+
+    # Database related modules
+    'DBI'                     => 0,
+    'DBD::SQLite'             => 1.20,
   },
   recommends => {
     # Video::Info for detecting FourCC used in files
