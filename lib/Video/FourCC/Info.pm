@@ -1,7 +1,7 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: Info.pm 8786 2009-08-28 21:38:32Z FREQUENCY@cpan.org $
+# $Id: Info.pm 8794 2009-08-29 13:21:43Z FREQUENCY@cpan.org $
 
 package Video::FourCC::Info;
 
@@ -45,11 +45,11 @@ Video::FourCC::Info - Perl module to retrieve information about FourCCs
 
 =head1 VERSION
 
-Version 1.003 ($Id: Info.pm 8786 2009-08-28 21:38:32Z FREQUENCY@cpan.org $)
+Version 1.004 ($Id: Info.pm 8794 2009-08-29 13:21:43Z FREQUENCY@cpan.org $)
 
 =cut
 
-our $VERSION = '1.003';
+our $VERSION = '1.004';
 $VERSION = eval $VERSION;
 
 =head1 DESCRIPTION
