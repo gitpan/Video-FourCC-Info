@@ -1,8 +1,8 @@
-$Id: README 8619 2009-08-18 04:34:49Z FREQUENCY@cpan.org $
+$Id: README 9530 2009-10-04 04:37:16Z FREQUENCY@cpan.org $
 
 Video::FourCC::Info is a Perl module to retrieve information about FourCCs
 
-Copyright 2009 by Jonathan Yu <frequency@cpan.org>. All rights reserved.
+Copyright 2009 by Jonathan Yu <jawnsy@cpan.org>. All rights reserved.
 
 INSTALLATION
 

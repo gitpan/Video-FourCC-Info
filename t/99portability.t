@@ -3,7 +3,7 @@
 # t/99portability.t
 #  Tests if the distribution seems to be portable
 #
-# $Id: 99portability.t 8620 2009-08-18 04:36:27Z FREQUENCY@cpan.org $
+# $Id: 99portability.t 10585 2009-12-22 02:50:06Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;

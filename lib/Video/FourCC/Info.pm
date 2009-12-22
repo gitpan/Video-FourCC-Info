@@ -1,7 +1,7 @@
 # Video::FourCC::Info
 #  Shows information about codecs specified as a Four Character Code
 #
-# $Id: Info.pm 8794 2009-08-29 13:21:43Z FREQUENCY@cpan.org $
+# $Id: Info.pm 10585 2009-12-22 02:50:06Z FREQUENCY@cpan.org $
 
 package Video::FourCC::Info;
 
@@ -45,11 +45,11 @@ Video::FourCC::Info - Perl module to retrieve information about FourCCs
 
 =head1 VERSION
 
-Version 1.004 ($Id: Info.pm 8794 2009-08-29 13:21:43Z FREQUENCY@cpan.org $)
+Version 1.005 ($Id: Info.pm 10585 2009-12-22 02:50:06Z FREQUENCY@cpan.org $)
 
 =cut
 
-our $VERSION = '1.004';
+our $VERSION = '1.005';
 $VERSION = eval $VERSION;
 
 =head1 DESCRIPTION
@@ -85,7 +85,9 @@ contact the maintainer.
 
 =head1 METHODS
 
-=head2 Video::FourCC::Info->new( $fourcc )
+=head2 new
+
+  Video::FourCC::Info->new( $fourcc )
 
 Creates a C<Video::FourCC::Info> object, which provides information about
 the given Four Character Code. If the code does not exist in the database,
@@ -149,7 +151,9 @@ sub new {
   return bless($self, $class);
 }
 
-=head2 Video::FourCC::Info->describe( $fourcc )
+=head2 describe
+
+  Video::FourCC::Info->describe( $fourcc )
 
 This is really just a shortcut to grab the short description of a codec given
 a Four Character Code as input. Note that this is a class method, not an
@@ -187,7 +191,9 @@ sub describe {
   return $codec->description;
 }
 
-=head2 $codec->description( )
+=head2 description
+
+  $codec->description( )
 
 This returns the short description of the codec. It may be C<undef> if there
 is no description in the database.
@@ -208,7 +214,9 @@ sub description {
   return $self->{desc};
 }
 
-=head2 $codec->registered( )
+=head2 registered
+
+  $codec->registered( )
 
 This returns the short description of the codec. It may be C<undef> if there
 is no description in the database.
@@ -232,7 +240,9 @@ sub registered {
   return $self->{regdate};
 }
 
-=head2 $codec->owner( )
+=head2 owner
+
+  $codec->owner( )
 
 This returns the name of the corporation or other entity that owns the
 FourCC. Generally, this seems to be an ad-hoc standard, so it's a listing
@@ -254,7 +264,9 @@ sub owner {
   return $self->{owner};
 }
 
-=head2 $codec->code( )
+=head2 code
+
+  $codec->code( )
 
 This returns the Four Character Code corresponding to the current
 C<Video::FourCC::Info> object.
@@ -275,7 +287,7 @@ sub code {
 
 =head1 AUTHOR
 
-Jonathan Yu E<lt>frequency@cpan.orgE<gt>
+Jonathan Yu E<lt>jawnsy@cpan.orgE<gt>
 
 =head2 CONTRIBUTORS
 

@@ -3,7 +3,7 @@
 # examples/fourcc.pl
 #  Determine information about a given codec
 #
-# $Id: fourcc.pl 8226 2009-07-26 00:22:19Z FREQUENCY@cpan.org $
+# $Id: fourcc.pl 9530 2009-10-04 04:37:16Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -74,7 +74,7 @@ foreach my $code (@codecs) {
 
 =head1 AUTHOR
 
-Jonathan Yu E<lt>frequency@cpan.orgE<gt>
+Jonathan Yu E<lt>jawnsy@cpan.orgE<gt>
 
 =head1 LICENSE
 

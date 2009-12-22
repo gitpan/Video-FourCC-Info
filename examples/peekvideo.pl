@@ -3,7 +3,7 @@
 # bin/peekvideo
 #  Determine information about a given media file
 #
-# $Id: peekvideo.pl 8226 2009-07-26 00:22:19Z FREQUENCY@cpan.org $
+# $Id: peekvideo.pl 9530 2009-10-04 04:37:16Z FREQUENCY@cpan.org $
 
 use strict;
 use warnings;
@@ -19,7 +19,7 @@ peekvideo - determine a codec used by a given file
 
 =head1 VERSION
 
-Version 1.1 ($Id: peekvideo.pl 8226 2009-07-26 00:22:19Z FREQUENCY@cpan.org $)
+Version 1.1 ($Id: peekvideo.pl 9530 2009-10-04 04:37:16Z FREQUENCY@cpan.org $)
 
 =cut
 
@@ -113,7 +113,7 @@ foreach my $file (@files) {
 
 =head1 AUTHOR
 
-Jonathan Yu E<lt>frequency@cpan.orgE<gt>
+Jonathan Yu E<lt>jawnsy@cpan.orgE<gt>
 
 =head1 SUPPORT
 
